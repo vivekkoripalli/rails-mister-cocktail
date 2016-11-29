@@ -1,0 +1,10 @@
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://lorempixel.com/400/200');">
+<h1><%= @cocktail.name %></h1>
+<% @cocktail.doses.each do  |dose| %>
+<%= dose.description %>
+<%= dose.ingredient %>
+ <% end  %>
+</div>
+<%= link_to "Cocktails", cocktails_path %>>
+<%= link_to "Add Dose", new_cocktail_dose_path(@cocktail) %>
+
